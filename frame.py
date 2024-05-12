@@ -7,8 +7,9 @@ class AutoClicker:
     def __init__(self) -> None:
         self.root = tk.Tk()
         self.root.title("Auto Clicker")
-        self.width = 150
-        self.height = 150
+        self.root.configure(background="#D2D2D2")
+        self.width = 200
+        self.height = 600
         self.clicks = 0
         self.click_speed = 0
         self.clicking = False
@@ -23,8 +24,10 @@ class AutoClicker:
         self.height = height
         self.root.geometry(f"{self.width}x{self.height}")
 
+
     def set_frame(self):
         self.main_frame = tk.Frame(self.root)
+        self.main_frame.configure(background="#D2D2D2")
         self.main_frame.pack(expand=True, fill="both")
 
     def close_button(self):
@@ -47,7 +50,7 @@ class AutoClicker:
         self.click_speed_entry.pack(side="bottom", pady=5, padx=10)
 
     def number_of_clicks_label(self):
-        self.counter_label = tk.Label(self.root, text="0", font=("Arial", 24), bg="lightblue", width=6, height=2)
+        self.counter_label = tk.Label(self.root, text="0", font=("Arial", 24), bg="#78DCFF", width=6, height=2)
         self.counter_label.place(relx=0.5, rely=0.5, anchor="center")
 
     def start_clicking(self, event=None):
